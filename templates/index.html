@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Classifier</title>
+</head>
+<body>
+<form id="classify-form">
+    <label for="model">Select model:</label>
+    <select id="model" name="model">
+        {% for model in models %}
+        <option value="{{ model }}">{{ model }}</option>
+        {% endfor %}
+    </select><br><br>
+    
+    <label for="directory">Path to images directory:</label>
+    <input type="text" id="directory" name="directory"><br><br>
+
+    <button type="button" id="classify-button">Classify</button>
+</form>
+
+<div id="result">
+    <img id="result-image" src="" alt="Classified image" style="width: 224px; height: 224px;"><br>
+    <p id="result-label"></p>
+</div>
+
+<div id="score">
+    <p>Score: <span id="score-value">0</span></p>
+    <button type="button" id="matrix-button">Matrix</button>
+    <button type="button" id="upscale-button">Upscale</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/static/script.js"></script>
+</body>
+</html>

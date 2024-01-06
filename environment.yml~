@@ -1,0 +1,30 @@
+name: discord_cuda_11.8
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - bzip2
+  - ca-certificates
+  - discord.py
+  - libffi
+  - openssl
+  - pip
+  - python-dotenv
+  - setuptools
+  - sqlite
+  - tk
+  - tzdata
+  - vc
+  - vs2015_runtime
+  - wheel
+  - xz
+  - zlib
+  - cudatoolkit=11.8
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pip:
+    - python-dotenv
+    - discord.py
+    - opencv-python
